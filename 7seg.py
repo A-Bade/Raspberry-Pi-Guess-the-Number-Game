@@ -8,7 +8,7 @@ from rpi_lcd import LCD
 
 
 #import machine
-#lcd = LCD()
+lcd = LCD()
 
 
 
@@ -165,6 +165,15 @@ def loop_pattern1():
 
      time.sleep(0.06)
 
+def base():
+     GPIO.output(35, True) # a
+     GPIO.output(12, True) # b
+     GPIO.output(36, True) # c
+     GPIO.output(33, True) # d
+     GPIO.output(32, True) # e
+     GPIO.output(38, True) # f
+     GPIO.output(40, True) # g
+
 def loop_pattern2():
      GPIO.output(seg2a, False) # a
      GPIO.output(seg2b, True) # b
@@ -226,10 +235,13 @@ def loop_pattern2():
 
      time.sleep(0.06)
 
-the_choice = ["a" "b" "c" "d" "e" "f" "g" "h" "i" "j"]
+#the_choice = ["a","b","c","d","e","f","g","h","i","j"]
+arr1 = [13]
+arr2 = [12]
 
 def SevenSeg(x): # Define function 'SevenSeg' which calls function 'one' 'two' or 'three' depending on 'x'
  if x == 1:
+     #del arr1[]:
      GPIO.output(seg2a, True) # a
      GPIO.output(seg2b, False) # b
      GPIO.output(seg2c, False) # c
@@ -237,8 +249,10 @@ def SevenSeg(x): # Define function 'SevenSeg' which calls function 'one' 'two' o
      GPIO.output(seg2e, True) # e
      GPIO.output(seg2f, True) # f
      GPIO.output(seg2g, True) # g
-     return the_choice[0]
+     arr1[0] = 1
+     #print(arr1[0])
  elif x == 2:
+     #del arr1[0]
      GPIO.output(seg2a, False) # a
      GPIO.output(seg2b, False) # b
      GPIO.output(seg2c, True) # c
@@ -246,7 +260,10 @@ def SevenSeg(x): # Define function 'SevenSeg' which calls function 'one' 'two' o
      GPIO.output(seg2e, False) # e
      GPIO.output(seg2f, True) # f
      GPIO.output(seg2g, False) # g
+     arr1[0] = 2
+     #print(arr1[0])
  elif x == 3:
+     #del arr1[0]
      GPIO.output(seg2a, False) # a
      GPIO.output(seg2b, False) # b
      GPIO.output(seg2c, False) # c
@@ -254,7 +271,10 @@ def SevenSeg(x): # Define function 'SevenSeg' which calls function 'one' 'two' o
      GPIO.output(seg2e, True) # e
      GPIO.output(seg2f, True) # f
      GPIO.output(seg2g, False) # g
+     arr1[0] = 3
+     #print(arr1[0])
  elif x == 4:
+     #del arr1[0]
      GPIO.output(seg2a, True) # a
      GPIO.output(seg2b, False) # b
      GPIO.output(seg2c, False) # c
@@ -262,7 +282,10 @@ def SevenSeg(x): # Define function 'SevenSeg' which calls function 'one' 'two' o
      GPIO.output(seg2e, True) # e
      GPIO.output(seg2f, False) # f
      GPIO.output(seg2g, False) # g
+     arr1[0] = 4
+     #print(arr1[0])
  elif x == 5:
+     #del arr1[0]
      GPIO.output(seg2a, False) # a
      GPIO.output(seg2b, True) # b
      GPIO.output(seg2c, False) # c
@@ -270,7 +293,10 @@ def SevenSeg(x): # Define function 'SevenSeg' which calls function 'one' 'two' o
      GPIO.output(seg2e, True) # e
      GPIO.output(seg2f, False) # f
      GPIO.output(seg2g, False) # g
+     arr1[0] = 5
+     #print(arr1[0])
  elif x == 6:
+     #del arr1[0]
      GPIO.output(seg2a, False) # a
      GPIO.output(seg2b, True) # b
      GPIO.output(seg2c, False) # c
@@ -278,7 +304,10 @@ def SevenSeg(x): # Define function 'SevenSeg' which calls function 'one' 'two' o
      GPIO.output(seg2e, False) # e
      GPIO.output(seg2f, False) # f
      GPIO.output(seg2g, False) # g
+     arr1[0] = 6
+     #print(arr1[0])
  elif x == 7:
+     #del arr1[0]
      GPIO.output(seg2a, False) # a
      GPIO.output(seg2b, False) # b
      GPIO.output(seg2c, False) # c
@@ -286,7 +315,10 @@ def SevenSeg(x): # Define function 'SevenSeg' which calls function 'one' 'two' o
      GPIO.output(seg2e, True) # e
      GPIO.output(seg2f, True) # f
      GPIO.output(seg2g, True) # g
+     arr1[0] = 7
+     #print(arr1[0])
  elif x == 8:
+     #del arr1[0]
      GPIO.output(seg2a, False) # a
      GPIO.output(seg2b, False) # b
      GPIO.output(seg2c, False) # c
@@ -294,7 +326,10 @@ def SevenSeg(x): # Define function 'SevenSeg' which calls function 'one' 'two' o
      GPIO.output(seg2e, False) # e
      GPIO.output(seg2f, False) # f
      GPIO.output(seg2g, False) # g
+     arr1[0] = 8
+     #print(arr1[0])
  elif x == 9:
+     #del arr1[0]
      GPIO.output(seg2a, False) # a
      GPIO.output(seg2b, False) # b
      GPIO.output(seg2c, False) # c
@@ -302,7 +337,10 @@ def SevenSeg(x): # Define function 'SevenSeg' which calls function 'one' 'two' o
      GPIO.output(seg2e, True) # e
      GPIO.output(seg2f, False) # f
      GPIO.output(seg2g, False) # g
+     arr1[0] = 9
+     #print(arr1[0])
  elif x == 10:
+     #del arr1[0]
      GPIO.output(seg2a, False) # a
      GPIO.output(seg2b, False) # b
      GPIO.output(seg2c, False) # c
@@ -310,9 +348,13 @@ def SevenSeg(x): # Define function 'SevenSeg' which calls function 'one' 'two' o
      GPIO.output(seg2e, False) # e
      GPIO.output(seg2f, False) # f
      GPIO.output(seg2g, True) # g
+     arr1[0] = 10
+     #print(arr1[0])
+
 
 def SevenSeg1(x):
  if x == 1:
+     #del arr2[0]
      GPIO.output(35, True) # a
      GPIO.output(12, False) # b
      GPIO.output(36, False) # c
@@ -320,7 +362,11 @@ def SevenSeg1(x):
      GPIO.output(32, True) # e
      GPIO.output(38, True) # f
      GPIO.output(40, True) # g
+     arr2[0] = 1
+
+     return arr2
  elif x == 2:
+     #del arr2[0]
      GPIO.output(35, False) # a
      GPIO.output(12, False) # b
      GPIO.output(36, True) # c
@@ -328,7 +374,11 @@ def SevenSeg1(x):
      GPIO.output(32, False) # e
      GPIO.output(38, True) # f
      GPIO.output(40, False) # g
+
+     arr2[0] = 2
+     return arr2
  elif x == 3:
+     #del arr2[0]
      GPIO.output(35, False) # a
      GPIO.output(12, False) # b
      GPIO.output(36, False) # c
@@ -336,7 +386,10 @@ def SevenSeg1(x):
      GPIO.output(32, True) # e
      GPIO.output(38, True) # f
      GPIO.output(40, False) # g
+     arr2[0] = 3
+     return arr2
  elif x == 4:
+     #del arr2[0]
      GPIO.output(35, True) # a
      GPIO.output(12, False) # b
      GPIO.output(36, False) # c
@@ -344,7 +397,11 @@ def SevenSeg1(x):
      GPIO.output(32, True) # e
      GPIO.output(38, False) # f
      GPIO.output(40, False) # g
+     arr2[0] = 4
+     #print(arr2[0])
+     return arr2
  elif x == 5:
+     #del arr2[0]
      GPIO.output(35, False) # a
      GPIO.output(12, True) # b
      GPIO.output(36, False) # c
@@ -352,7 +409,10 @@ def SevenSeg1(x):
      GPIO.output(32, True) # e
      GPIO.output(38, False) # f
      GPIO.output(40, False) # g
+     arr2[0] = 5
+     return arr2
  elif x == 6:
+     #del arr2[0]
      GPIO.output(35, False) # a
      GPIO.output(12, True) # b
      GPIO.output(36, False) # c
@@ -360,7 +420,10 @@ def SevenSeg1(x):
      GPIO.output(32, False) # e
      GPIO.output(38, False) # f
      GPIO.output(40, False) # g
+     arr2[0] = 6
+     return arr2
  elif x == 7:
+     #del arr2[0]
      GPIO.output(35, False) # a
      GPIO.output(12, False) # b
      GPIO.output(36, False) # c
@@ -368,7 +431,10 @@ def SevenSeg1(x):
      GPIO.output(32, True) # e
      GPIO.output(38, True) # f
      GPIO.output(40, True) # g
+     arr2[0] = 7
+     return arr2
  elif x == 8:
+     #del arr2[0]
      GPIO.output(35, False) # a
      GPIO.output(12, False) # b
      GPIO.output(36, False) # c
@@ -376,7 +442,10 @@ def SevenSeg1(x):
      GPIO.output(32, False) # e
      GPIO.output(38, False) # f
      GPIO.output(40, False) # g
+     arr2[0] = 8
+     return arr2
  elif x == 9:
+     #del arr2[0]
      GPIO.output(35, False) # a
      GPIO.output(12, False) # b
      GPIO.output(36, False) # c
@@ -384,7 +453,10 @@ def SevenSeg1(x):
      GPIO.output(32, True) # e
      GPIO.output(38, False) # f
      GPIO.output(40, False) # g
+     arr2[0] = 9
+     return arr2
  elif x == 10:
+     #del arr2[0]
      GPIO.output(35, False) # a
      GPIO.output(12, False) # b
      GPIO.output(36, False) # c
@@ -392,6 +464,8 @@ def SevenSeg1(x):
      GPIO.output(32, False) # e
      GPIO.output(38, False) # f
      GPIO.output(40, True) # g
+     arr2[0] = 10
+     return arr2
 store = 0
 
 def loop1():
@@ -511,16 +585,81 @@ def loop1():
             time.sleep(0.01)
 
 
+def loop3():
+    determine = 3
+    while True:
+        ###CHECK 1
+        for u in range (0,3):
+            if GPIO.input(26) == False and determine == 3:
+
+                    print(determine)
+                    determine = determine - 1
+                    if arr1[0] == arr2[0]:
+                        print("Success!!")
+                        lcd.text("CORRECT!!!", 1)
+                        lcd.text("   :D", 2)
+                        time.sleep(5)
+                        lcd.text("Restarting...",1)
+                        time.sleep(3)
+                        lcd.clear()
+                        time.sleep(2)
+                        os.execv(sys.executable, ['python'] + sys.argv)
+                    if arr1[0] != arr2[0]:
+
+                        #u = u - 1
+                        lcd.text("WRONG!!!", 1)
+                        lcd.text("   :(  Lives = " + format(determine), 2)
+                        #time.sleep(0.001)
+                        time.sleep(3)
+                        lcd.clear()
+
+            if GPIO.input(26) == False and determine == 2:
+
+                    print(determine)
+                    determine = determine - 1
+                    if arr1[0] == arr2[0]:
+                        print("Success!!")
+                        lcd.text("CORRECT!!!", 1)
+                        lcd.text("   :D", 2)
+                        time.sleep(10)
+                        lcd.text("Restarting...",1)
+                        time.sleep(3)
+                        lcd.clear()
+                        time.sleep(2)
+                        os.execv(sys.executable, ['python'] + sys.argv)
+                    if arr1[0] != arr2[0]:
+
+                        #u = u - 1
+                        lcd.text("WRONG!!!", 1)
+                        lcd.text("   :(  Lives = " + format(determine), 2)
+                        #time.sleep(0.001)
+                        time.sleep(3)
+                        lcd.clear()
 
 
 
-        if GPIO.input(26) == False:
-            if SevenSeg1(num3) == 0:
-                print("Success!!")
-                time.sleep(0.001)
-            else:
-                print("Failure!!")
-                time.sleep(0.001)
+
+
+            if GPIO.input(26) == False and determine == 1:
+                    if arr1[0] == arr2[0]:
+                        print("Success!!")
+                        lcd.text("CORRECT!!!", 1)
+                        lcd.text("   :D", 2)
+                        time.sleep(10)
+                        lcd.text("Restarting...",1)
+                        time.sleep(3)
+                        lcd.clear()
+                        time.sleep(2)
+                        os.execv(sys.executable, ['python'] + sys.argv)
+                    if arr1[0] != arr2[0]:
+                        lcd.text("GAME OVER!!!", 1)
+                        lcd.text("     >:(", 2)
+                        time.sleep(10)
+                        lcd.text("Restarting...",1)
+                        time.sleep(3)
+                        lcd.clear()
+                        time.sleep(2)
+                        os.execv(sys.executable, ['python'] + sys.argv)
 
 
 
@@ -536,14 +675,25 @@ def loop2():
                 #print( "The game has started...")
                         #digdisp(displayer[num2])
                 SevenSeg1(random.randint(1,10))
-
-                time.sleep(0.5)
+                lcd.text("Game has...", 1)
+                lcd.text("     STARTED!!", 2)
+                time.sleep(3)
+                lcd.text("Choose with Blk", 1)
+                lcd.text("Compare with Y", 2)
+                time.sleep(100000000)
                 s = s+1
 
 
 
             else:
-                loop_pattern1()
+
+                base()
+                lcd.text("Welcome to Guess", 1)
+                lcd.text("The Number Game!", 2)
+                time.sleep(1.5)
+                lcd.text("Hold Grn Button", 1)
+                lcd.text("To Start Game!!!", 2)
+                time.sleep(1.5)
 
 
 
@@ -552,6 +702,9 @@ thread1 = threading.Thread(target=loop1)
 thread1.start()
 
 thread2 = threading.Thread(target=loop2)
+thread2.start()
+
+thread2 = threading.Thread(target=loop3)
 thread2.start()
 
 
